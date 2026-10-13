@@ -4,26 +4,11 @@
 
 ## 在线游玩（HTTPS）
 
-- **主链接（推荐）**：https://acidic-crest-ntcmv.ship.place/
-- **GitHub 镜像**：https://raw.githack.com/tomketang/the-last-spear-web/main/index.html
-- **源码仓库**：https://github.com/tomketang/the-last-spear-web
+- **主链接**：https://acidic-crest-ntcmv.ship.place/
+- **长期镜像（公开仓 CDN）**：https://raw.githack.com/tomketang/the-last-spear-web/main/index.html
+- **源码**：https://github.com/tomketang/the-last-spear-web
 
-> ship.page 免费链接默认约 30 天；打开 claim 链接可延长。私有仓 `the-last-spear` 未开 GitHub Pages（私有 Pages 通常需付费）。
-
-## 如何本地打开
-
-### 方式 A：本地静态服务器（推荐）
-
-```bash
-cd .
-python3 -m http.server 8765
-```
-
-浏览器打开：http://127.0.0.1:8765/
-
-### 方式 B：直接打开文件
-
-用浏览器打开 `index.html`（`file://`）。
+私有仓 `tomketang/the-last-spear` 未开 GitHub Pages（私有 Pages 通常需付费）。本公开仓已放好 Pages workflow；若要 `https://tomketang.github.io/the-last-spear-web/`，请到仓库 **Settings → Pages → Source** 选 **GitHub Actions**，然后 re-run workflow。
 
 ## 操作
 
@@ -33,38 +18,10 @@ python3 -m http.server 8765
 | 矛戳 | `J` / `Z` | 左键 |
 | 盾轮格挡 | `K` / `X` | 右键 |
 | 无限冲刺 | `空格` / `L` / `C` | — |
-| 选章 | `1` / `2` / `3` / `4` 或 `←` `→` | 点击章节卡片 |
-| 开始 / 再来 | `Enter` / `空格` | 点击画布 |
-| 回营地 | `T` / `Esc`（结算屏） | — |
-
-## 选章
-
-- **标题屏**：左右或 `1`/`2`/`3`/`4` 选章，Enter / 点击出发。开发期 **各章可直接选**。
-- **通关 Ch.1**：自动解锁 Ch.2
-- **通关 Ch.2**：自动解锁 Ch.3
-- **通关 Ch.3**：自动解锁 Ch.4；收编钉头则 Ch.4 有钉头掩体
-- **通关 Ch.4**：终章结算（结局 A 或 B）
-
-## 玩法目标
-
-### Ch.1 矛阵起夜
-骑「无限」拆两座红线塔卫底座的 + / ×，躲开红雨弹幕。
-
-### Ch.2 笑墙合拢（Boss：城魂·咧嘴）
-拆墙后打脸；怒视减速、齿刃、笑墙夹击。
-
-### Ch.3 哨兵一锤（精英：节触哨·钉头）
-收编（蓝心扫射时 K 格挡）或击败钉头。
-
-### Ch.4 蓝心开合（天裂之主·蓝心）
-拆荚 → 攀关节 → 打蓝心窗；结局 A 扎蓝心 / B 扎「还要」（正史）。
+| 选章 | `1`/`2`/`3`/`4` | 点击章节卡片 |
+| 开始 | `Enter` / `空格` | 点击画布 |
 
 ## 文件
 
 - `index.html` — 入口
 - `game.js` — 全部游戏逻辑（Ch.1～Ch.4）
-- `README.md` — 本说明
-
-## 已知限制
-
-- 无音效；触屏未做虚拟摇杆；「遗忘」成长兑换未实装。
