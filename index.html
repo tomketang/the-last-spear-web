@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>最后一矛 / The Last Spear — Ch.1～Ch.4 完整垂直切片</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 100%; height: 100%;
+    background: #e8e0d0;
+    background-image:
+      radial-gradient(ellipse at 30% 20%, #f4efe4 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 80%, #ddd4c4 0%, transparent 50%);
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    overflow: hidden;
+    color: #1a1a1a;
+  }
+  #wrap {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 10px;
+  }
+  canvas {
+    background: #faf7f0;
+    border: 2px solid #1a1a1a;
+    box-shadow:
+      5px 5px 0 #c81e1e33,
+      0 0 0 1px #1a1a1a22;
+    max-width: 96vw; max-height: 86vh;
+    image-rendering: auto;
+    cursor: crosshair;
+    border-radius: 1px;
+  }
+  #hint {
+    font-size: 13px; color: #555;
+    letter-spacing: 0.05em;
+  }
+  #hint kbd {
+    display: inline-block;
+    border: 1px solid #1a1a1a;
+    padding: 0 5px;
+    border-radius: 3px;
+    background: #faf7f0;
+    box-shadow: 1px 1px 0 #c81e1e44;
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="c" width="960" height="540"></canvas>
+  <div id="hint">移动 <kbd>WASD</kbd>/<kbd>方向键</kbd> · 矛戳 <kbd>J</kbd>/<kbd>左键</kbd> · 盾轮 <kbd>K</kbd>/<kbd>右键</kbd> · 无限冲 <kbd>空格</kbd>/<kbd>L</kbd></div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
