@@ -4,11 +4,21 @@
 
 ## 在线游玩（HTTPS）
 
-- **主链接**：https://acidic-crest-ntcmv.ship.place/
-- **长期镜像（公开仓 CDN）**：https://raw.githack.com/tomketang/the-last-spear-web/main/index.html
+- **稳定地址（GitHub Pages）**：https://tomketang.github.io/the-last-spear-web/
+- **临时镜像**：https://acidic-crest-ntcmv.ship.place/
+- **CDN 镜像**：https://raw.githack.com/tomketang/the-last-spear-web/main/index.html
 - **源码**：https://github.com/tomketang/the-last-spear-web
 
-私有仓 `tomketang/the-last-spear` 未开 GitHub Pages（私有 Pages 通常需付费）。本公开仓已放好 Pages workflow；若要 `https://tomketang.github.io/the-last-spear-web/`，请到仓库 **Settings → Pages → Source** 选 **GitHub Actions**，然后 re-run workflow。
+### 启用 GitHub Pages（只需一次）
+
+Actions / API 无法代替仓库管理员首次开通 Pages（会报 `Resource not accessible by integration`）。请用浏览器登录 GitHub 后：
+
+1. 打开 https://github.com/tomketang/the-last-spear-web/settings/pages
+2. **Build and deployment → Source** 选 **Deploy from a branch**
+3. **Branch** 选 **main**，文件夹选 **/ (root)**，点 **Save**
+4. 等约 1～2 分钟，打开 https://tomketang.github.io/the-last-spear-web/
+
+静态站已在 `main` 根目录（`index.html` + `game.js` + `.nojekyll`），无需 Actions 构建。
 
 ## 操作
 
@@ -25,3 +35,4 @@
 
 - `index.html` — 入口
 - `game.js` — 全部游戏逻辑（Ch.1～Ch.4）
+- `.nojekyll` — 让 Pages 按纯静态站托管
